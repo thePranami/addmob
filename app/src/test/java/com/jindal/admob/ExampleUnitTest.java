@@ -1,4 +1,4 @@
-package com.jindal.oktest;
+package com.jindal.admob;
 
 import org.junit.Test;
 

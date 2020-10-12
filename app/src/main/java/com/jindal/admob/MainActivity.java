@@ -1,17 +1,17 @@
-package com.jindal.oktest;
+package com.jindal.admob;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private ListAdapter listAdapter;
@@ -31,6 +31,13 @@ public class MainActivity extends AppCompatActivity {
         mainAdView = findViewById(R.id.adViewMain);
         AdRequest adRequest = new AdRequest.Builder().build();
         mainAdView.loadAd(adRequest);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                startActivity(new Intent(MainActivity.this, InterstitialAds.class));
+            }
+        });
 
     }
 }

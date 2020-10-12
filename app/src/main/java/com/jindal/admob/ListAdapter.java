@@ -1,4 +1,4 @@
-package com.jindal.oktest;
+package com.jindal.admob;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +9,6 @@ import android.widget.TextView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
